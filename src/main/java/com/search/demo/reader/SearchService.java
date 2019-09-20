@@ -45,6 +45,7 @@ public class SearchService {
 			List<JSONObject> filteredList = getJsonObjectOfCategoryFromKeyValue(category, input3, input4);
 			for (JSONObject jsonObject : filteredList) {
 				processSearch(jsonObject);
+				System.out.println("\n----------------------------\n");
 			}
 			return filteredList;
 		} catch (Exception e) {
