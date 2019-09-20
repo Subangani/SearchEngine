@@ -11,7 +11,7 @@ import java.io.IOException;
 @Component
 public class CommonUtil {
 
-	public static void printFileContent(String fileName){
+	public static void printFileContent(String fileName) {
 		ClassLoader classLoader = SearchEngine.class.getClassLoader();
 
 		try (BufferedReader br = new BufferedReader(new FileReader(classLoader.getResource(fileName).getFile()))) {
@@ -19,14 +19,14 @@ public class CommonUtil {
 			while ((line = br.readLine()) != null) {
 				System.out.println(line);
 			}
-		} catch (FileNotFoundException e){
+		} catch (FileNotFoundException e) {
 
 		} catch (IOException e) {
 
 		}
 	}
 
-	public static void printSearchResult(String key, String value){
+	public static void printSearchResult(String key, String value) {
 		System.out.printf("%-30.30s  %-30.30s%n", key, value);
 	}
 }

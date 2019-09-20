@@ -1,9 +1,7 @@
 package com.search.demo.reader;
 
-import com.search.demo.DemoApplication;
 import com.search.demo.util.CommonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
@@ -28,12 +26,12 @@ public class SearchEngine {
 	public void search() {
 
 		commonUtil.printFileContent("data/initial.txt");
-		Scanner scanner = new Scanner(System. in);
+		Scanner scanner = new Scanner(System.in);
 
 		boolean searchOptionSelection = true;
-		while (searchOptionSelection){
-			String input1 = scanner. nextLine();
-			switch (input1){
+		while (searchOptionSelection) {
+			String input1 = scanner.nextLine();
+			switch (input1) {
 			case ONE:
 				System.out.println("Please enter correct choice to proceed[ 1) Users or 2) Tickets or 3) Organizations]");
 				searchOptionSelection = false;
@@ -51,12 +49,12 @@ public class SearchEngine {
 		}
 		System.out.println("Select 1) Users or 2) Tickets or 3) Organizations");
 		boolean categorySelection = true;
-		while (categorySelection){
-			String input2 = scanner. nextLine();
-			if ( input2.equalsIgnoreCase(ONE) || input2.equalsIgnoreCase(TWO)  || input2.equalsIgnoreCase(THREE) ){
+		while (categorySelection) {
+			String input2 = scanner.nextLine();
+			if (input2.equalsIgnoreCase(ONE) || input2.equalsIgnoreCase(TWO) || input2.equalsIgnoreCase(THREE)) {
 				categorySelection = false;
 				searchForData(input2);
-			} else if (input2.equalsIgnoreCase(QUIT)){
+			} else if (input2.equalsIgnoreCase(QUIT)) {
 				System.exit(1);
 			} else {
 				System.out.println("Please enter correct choices to proceed");
@@ -64,8 +62,8 @@ public class SearchEngine {
 		}
 	}
 
-	private void searchForData(String category){
-		switch (category){
+	private void searchForData(String category) {
+		switch (category) {
 		case ONE:
 			userSearchService.searchForUserData(category);
 			break;
