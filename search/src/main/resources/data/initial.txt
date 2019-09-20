@@ -1,0 +1,6 @@
+Type 'quit' to exit at any point, 'Press Enter' to continue
+
+    Select search options
+    * Press 1 to search
+    * Press 2 to view a list of searchable fields
+    * Type 'quit' to exit
