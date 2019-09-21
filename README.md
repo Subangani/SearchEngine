@@ -4,13 +4,13 @@ An application to search data from JSON
 prerequistics
 
 Java 8
-Maven
+Gradle
 
 Guide to build the project
 Navigate to project location in therminal and run
-    `mvn clean install`
+    `./gradlew clean build`
 
 then to start run
-    ` mvn spring-boot:run`
+    Run the main Application class
     
     
