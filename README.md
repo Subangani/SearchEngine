@@ -10,7 +10,7 @@ Guide to build the project
 Navigate to project location in therminal and run
     `./gradlew clean build`
 
-then to start run
+then to start 
     Run the main Application class
     
     

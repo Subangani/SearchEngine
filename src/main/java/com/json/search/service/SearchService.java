@@ -43,7 +43,7 @@ public abstract class SearchService {
             }
 
         } catch (FileNotFoundException e) {
-            throw new RuntimeException("Fle is not found in the location");
+            e.printStackTrace();
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -72,7 +72,7 @@ public abstract class SearchService {
             }
 
         } catch (FileNotFoundException e) {
-
+            e.printStackTrace();
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -101,7 +101,7 @@ public abstract class SearchService {
             }
 
         } catch (FileNotFoundException e) {
-
+            e.printStackTrace();
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

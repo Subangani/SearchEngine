@@ -41,30 +41,30 @@ public class OrganizationSearchServiceTest {
     }
 
     @Test
-    public void searchUserServiceWithInvalidIdTest(){
+    public void searchOrgServiceWithInvalidIdTest(){
         List<Organization> organizationList = organizationSearchService.searchForOrganizationData("_id","999");
         Assert.assertEquals(0,organizationList.size());
     }
 
     @Test
-    public void searchUserServiceWithInValidfieldTest(){
-        List<Organization> user = organizationSearchService.searchForOrganizationData("status","false");
-        Assert.assertEquals(0,user.size());
+    public void searchOrgServiceWithInValidfieldTest(){
+        List<Organization> Org = organizationSearchService.searchForOrganizationData("status","false");
+        Assert.assertEquals(0,Org.size());
     }
 
     @Test
-    public void searchUserServiceWithValidfieldTest(){
+    public void searchOrgServiceWithValidfieldTest(){
         List<Organization> organizationList = organizationSearchService.searchForOrganizationData("shared_tickets","false");
         Assert.assertEquals(15,organizationList.size());
     }
 
     @Test
-    public void searchUserWithValidDataTest(){
+    public void searchOrgWithValidDataTest(){
         organizationSearchService.search("_id","101");
     }
 
     @Test
-    public void searchUserWithInValidDataTest(){
+    public void searchOrgWithInValidDataTest(){
         organizationSearchService.search("details","sddsdfgcom");
     }
 
