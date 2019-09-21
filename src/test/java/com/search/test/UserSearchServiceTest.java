@@ -4,6 +4,7 @@ import com.json.search.document.User;
 import com.json.search.service.UserSearchService;
 import org.beryx.textio.TextIO;
 import org.beryx.textio.TextIoFactory;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -76,5 +77,10 @@ public class UserSearchServiceTest {
     @Test
     public void searchUserWithInValidDataTest(){
         userSearchService.search("email","sddsdfg@xcvb.com");
+    }
+
+    @After
+    public void after(){
+        textIO.dispose();
     }
 }

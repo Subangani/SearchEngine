@@ -16,8 +16,8 @@ public class OrganizationSearchService extends SearchService {
     @Override
     public void search(String key, String value) {
 
-        List<Organization> filteredOrganizationList = searchForOrganizationData(key,value);
-        if (!filteredOrganizationList.isEmpty()){
+        List<Organization> filteredOrganizationList = searchForOrganizationData(key, value);
+        if (!filteredOrganizationList.isEmpty()) {
             filteredOrganizationList.stream().forEach(e -> {
                 processEachOrganizationRecord(e);
                 textIO.getTextTerminal().println("*****************************");
@@ -28,17 +28,17 @@ public class OrganizationSearchService extends SearchService {
         }
     }
 
-    private  void processEachOrganizationRecord(Organization org){
+    private void processEachOrganizationRecord(Organization org) {
         String org_id = String.valueOf(org.get_id());
         printAllDocumentFields(org);
-        List<Ticket> filtedTickets = searchForTickerData(ORGANIZATION_ID, org_id );
+        List<Ticket> filtedTickets = searchForTickerData(ORGANIZATION_ID, org_id);
         filtedTickets.stream().forEach(e -> {
-            textIO.getTextTerminal().printf("%-30.30s  %-30.30s%n","subject",e.getSubject());
+            textIO.getTextTerminal().printf("%-30.30s  %-30.30s%n", "subject", e.getSubject());
         });
         textIO.getTextTerminal().println();
         List<User> filteredUsers = searchForUserData(ORGANIZATION_ID, org_id);
         filteredUsers.stream().forEach(e -> {
-            textIO.getTextTerminal().printf("%-30.30s  %-30.30s%n","user_name",e.getName());
+            textIO.getTextTerminal().printf("%-30.30s  %-30.30s%n", "user_name", e.getName());
         });
     }
 

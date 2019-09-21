@@ -11,14 +11,14 @@ public class User {
     private boolean active;
     private boolean verified;
     private boolean shared;
-    private String  locale;
-    private String  timezone;
-    private String  last_login_at;
-    private String  email;
-    private String  phone;
-    private String  signature;
-    private int  organization_id;
-    private List<String>  tags;
+    private String locale;
+    private String timezone;
+    private String last_login_at;
+    private String email;
+    private String phone;
+    private String signature;
+    private int organization_id;
+    private List<String> tags;
     private boolean suspended;
     private String role;
 

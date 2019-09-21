@@ -4,6 +4,7 @@ import com.json.search.document.Organization;
 import com.json.search.service.OrganizationSearchService;
 import org.beryx.textio.TextIO;
 import org.beryx.textio.TextIoFactory;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -67,4 +68,8 @@ public class OrganizationSearchServiceTest {
         organizationSearchService.search("details","sddsdfgcom");
     }
 
+    @After
+    public void after(){
+        textIO.dispose();
+    }
 }
